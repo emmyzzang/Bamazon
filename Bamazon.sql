@@ -10,7 +10,8 @@ StockQuantity SMALLINT UNSIGNED NOT NULL,
 PRIMARY KEY (ItemID)
 );
 
-INSERT INTO (ProductName, DepartmentName, Price, StockQuantity) 
+INSERT INTO Products 
+	(ProductName, DepartmentName, Price, StockQuantity) 
 
 VALUES 
 
