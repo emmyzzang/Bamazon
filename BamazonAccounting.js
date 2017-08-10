@@ -1,9 +1,9 @@
-var chalk = require('chalk');
-var accounting = require('accounting');
+let chalk = require('chalk');
+let accounting = require('accounting');
 
-var createQuery = function(col) {
-  var query = 'SELECT ';
-  for (var i = 0; i < col.length; i++) {
+let createQuery = function(col) {
+  let query = 'SELECT ';
+  for (let i = 0; i < col.length; i++) {
     query += col[i].split(' ').join('') + ' AS "' + col[i] + '"';
     if (i !== col.length-1) {
       query += ', ';
@@ -15,17 +15,17 @@ var createQuery = function(col) {
   return query;
 };
 
-var printData = function(res, col) {
+let printData = function(res, col) {
   // Grab length of column header
-  var colLengths = [];
-  for (var h = 0; h < col.length; h++) {
+  let colLengths = [];
+  for (let h = 0; h < col.length; h++) {
     colLengths.push(col[h].split('').length);
   }
   // Loop through each row
-  for (var i = 0; i < res.length; i++) {
+  for (let i = 0; i < res.length; i++) {
     // Loop through each column
-    for (var j = 0; j < col.length; j++) {
-      var length;
+    for (let j = 0; j < col.length; j++) {
+      let length;
       // Check to see if datatype is number, if so turn to string
       if (typeof res[i][col[j]] === 'number') {
         // If price, overhead, sales, or profit add $ and format properly
@@ -39,21 +39,21 @@ var printData = function(res, col) {
     }
   }
   // Loop through each row
-  for (var k = 0; k < res.length; k++) {
-    var header = '| ';
-    var divider = '+';
-    var row = '| ';
+  for (let k = 0; k < res.length; k++) {
+    let header = '| ';
+    let divider = '+';
+    let row = '| ';
     // Loop through each column
-    for (var l = 0; l < col.length; l++) {
-      var spacerHeader = '';
-      var spacer = '';
-      for (var m = 0; m < colLengths[l]; m++) {
+    for (let l = 0; l < col.length; l++) {
+      let spacerHeader = '';
+      let spacer = '';
+      for (let m = 0; m < colLengths[l]; m++) {
         // Add beginning dashed space
         if (m === 0) divider += '-';
         // Fill in divider
         divider += '-';
         // Check to see if datatype is number, if so turn to string
-        var length;
+        let length;
         if (typeof res[k][col[l]] === 'number') {
           length = res[k][col[l]].toString().split('').length;
         } else {
@@ -78,7 +78,7 @@ var printData = function(res, col) {
     }
     // Add header
     if (k === 0) {
-      console.log(chalk.bold.blue('\nCurrent Items on Sale\n'));
+      console.log(chalk.bold.blue('\nCurrent Items for Sale\n'));
       console.log(divider);
       console.log(header);
       console.log(divider);
@@ -90,7 +90,7 @@ var printData = function(res, col) {
   console.log('');
 };
 
-var validateQuantity = function(value) {
+let validateQuantity = function(value) {
   if (value>=0 && value<=65535 && value%1===0 && value.indexOf(' ')<0 && value.indexOf('.')<0) {
     return true;
   } else {
@@ -98,7 +98,7 @@ var validateQuantity = function(value) {
   }
 }
 
-var validateMoney = function(value) {
+let validateMoney = function(value) {
   format = accounting.formatMoney(value, "", 2, "",".")
   if (format !== '0.00' && Number(format) <= 99999999.99) {
     return true;
