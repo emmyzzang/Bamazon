@@ -6,7 +6,7 @@ const chalk = require("chalk");
 const Table = require('cli-table');
 const Bamazon = require('./BamazonAccounting');
 
-
+// SHOULD I MOVE THIS // POSSIBLE TO DO 
 // // DB CONFIG 
 // let connection = mysql.createConnection({
 // 	host: 'localhost', 
