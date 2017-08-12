@@ -25,3 +25,19 @@ VALUES
     ('Hyundai Elantra','Vehicles',18500.00,1000),
     ('Mini Cooper','Vehicles',25000.00,1000),
     ('Kia Soul','Vehicles',17700.00,100);
+
+
+CREATE TABLE Departments (
+    DepartmentID INT(10) UNSIGNED AUTO_INCREMENT NOT NULL,
+    DepartmentName VARCHAR(255) NOT NULL,
+    OverheadCosts DECIMAL(10,2) DEFAULT 0.00 NOT NULL,
+    ProductSales DECIMAL(10,2) DEFAULT 0.00,
+    PRIMARY KEY(DepartmentID)
+);
+INSERT INTO Departments 
+    (DepartmentName,OverHeadCosts)
+VALUES
+    ('Electronics',1000),
+    ('Vehicles',200),
+   
+

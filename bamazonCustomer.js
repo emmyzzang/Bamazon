@@ -6,15 +6,13 @@ const chalk = require("chalk");
 const Table = require('cli-table');
 const Bamazon = require('./BamazonAccounting');
 
-// SHOULD I MOVE THIS // POSSIBLE TO DO 
-// // DB CONFIG 
-// let connection = mysql.createConnection({
-// 	host: 'localhost', 
-// 	port: 3306,
-// 	user: 'root', 
-// 	password: '', 
-// 	database: 'Bamazon'
-// }); 
+let connection = mysql.createConnection({
+	host: 'localhost', 
+	port: 3306,
+	user: 'root', 
+	password: '', 
+	database: 'Bamazon'
+}); 
 
 connection.connect(function(err) {
 	if (err) throw err; 
