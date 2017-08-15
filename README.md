@@ -29,3 +29,16 @@ On runtime initialization of the module, BamazonManager.js, the Manager has the 
 
 <img src="images/ManagerView.png"> 
 
+III. SUPERVISOR VIEW 
+
+On runtime initialization of the module, BamazonSupervisor.js, the Supervisor has the ability to select between the following options: 
+
+* View Product Sales by Department 
+* Create New Department 
+
+When a supervisor selects View Product Sales by Department, Bamazon displays a summarized table in the console. 
+The Total Profit column is calculated on the fly using the difference between Overhead Costs and Product Sales. Since, Total Profit is a variable cost, subject to change at any instance, it is the only data set that is not permanently stored in any database. 
+
+
+
+
