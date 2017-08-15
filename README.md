@@ -37,7 +37,7 @@ On runtime initialization of the module, BamazonSupervisor.js, the Supervisor ha
 * Create New Department 
 
 When a supervisor selects View Product Sales by Department, Bamazon displays a summarized table in the console. 
-The Total Profit column is calculated on the fly using the difference between Overhead Costs and Product Sales. Since, Total Profit is a variable cost, subject to change at any instance, it is the only data set that is not permanently stored in any database. 
+The Total Profit column is calculated on the fly using the difference between Overhead Costs and Product Sales. Since Total Profit is a variable cost, subject to change at any instance, it is the only data set that is not permanently stored in any database. 
 
 
 
