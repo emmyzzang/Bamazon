@@ -6,7 +6,9 @@ This App allows customers, as well as managers and executives, to access product
 
 The following features are included. 
 
-On runtime initialization of the BamazonCustomer view, the Item ID, product name, and price of each product are displayed to the user. The user is prompted to enter the item ID of the product they would like to buy as well as how many units they would like to buy. 
+I. CUSTOMER VIEW
+
+On runtime initialization of the module, 'bamazonCustomer.js', the Item ID, product name, and price of each product are displayed to the user. The user is prompted to enter the item ID of the product they would like to buy as well as how many units they would like to buy. 
 
 <img src="images/AmazonCustomerView.png">
 
@@ -15,3 +17,15 @@ Once the user has placed the order, Bamazon checks if the store has enough of th
 <img src="images/AmazonCustomer+Insufficient.png">
 
 The Item ID, Department Name, Price, and Stock Quantity are maintained in Bamazon's database. The Bamazon database will be updated after purchases are completed. 
+
+II. MANAGER VIEW 
+
+On runtime initialization of the module, BamazonManager.js, the Manager has the ability to select between the following options to alter the inventory:
+
+* View Products for Sale
+* View Low Inventory
+* Add to Inventory
+* Add New Products
+
+<img src="images/ManagerView.png"> 
+
